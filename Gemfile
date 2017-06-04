@@ -46,7 +46,6 @@ group :development do
 end
 
 gem 'carrierwave'
-gem 'paperclip'
 gem 'devise'
 gem 'gmaps4rails'
 gem 'jquery-turbolinks'

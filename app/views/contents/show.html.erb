@@ -5,5 +5,16 @@
   <%= @content.date %>
 </p>
 
+<!-- 追加箇所 開始 -->
+<p>
+<strong>Image:</strong>
+<% if @content.image? %>
+  <div class="thumbnail">
+  <%= image_tag @content.image.url %>
+</div>
+<% end %>
+</p>
+<!-- 追加箇所 終了 -->
+
 <%= link_to 'Edit', edit_content_path(@content) %> |
 <%= link_to 'Back', contents_path %>
