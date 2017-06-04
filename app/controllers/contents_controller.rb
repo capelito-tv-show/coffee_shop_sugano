@@ -70,6 +70,6 @@ class ContentsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def content_params
       # params.require(:content).permit(:date)
-      params.require(:content).permit(:date, :image, :image_cache, :remove_image)
+      params.require(:content).permit(:date, :image, :image_cache, :remove_image,:text,:title)
     end
 end

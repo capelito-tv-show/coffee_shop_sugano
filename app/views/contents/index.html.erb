@@ -1,37 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <p id="notice"><%= notice %></p>
 
-<h1>Listing Contents</h1>
+      <h3>お知らせ</h3>
+          <% @contents.each do |content| %>
+            <div class="c-head text-left">
+              <%= content.date %>
+              <h4 class=""><%= content.title %></h4>
+            </div>
+            <div class="c-image">
+              <% if content.image? %>
+                <div class="thumbnail" style="">
+                  <%= image_tag(content.image.url,:class =>"",:style =>"") %>
+                </div>
+              <% end %>
+            </div>
+              <div class="text-left">
+                <p>
+                  <%= content.text %>
+                </p>
+              </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+              <div class="text-left">
+                <%= link_to '投稿を閲覧する', content %> <br>
+                <%= link_to '編集する', edit_content_path(content) %> <br>
+                <%= link_to '削除する', content, method: :delete, data: { confirm: 'Are you sure?' } %>      <br>
+              </div>
 
-  <tbody>
-    <% @contents.each do |content| %>
-      <tr>
-        <td><%= content.date %></td>
-        <!-- 追加箇所 開始 -->
-        <p>
-        <strong>Image:</strong>
-        <% if content.image? %>
-          <div class="thumbnail">
-          <%= image_tag content.image.url %>
-        </div>
-        <% end %>
-        </p>
-        <!-- 追加箇所 終了 -->
-        <td><%= link_to 'Show', content %></td>
-        <td><%= link_to 'Edit', edit_content_path(content) %></td>
-        <td><%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Content', new_content_path %>
+          <% end %>
+      <br>
+      <%= link_to '新規投稿作成', new_content_path %>
+    </div>
+  </div>
+</div>

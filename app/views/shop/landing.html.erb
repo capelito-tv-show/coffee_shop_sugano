@@ -12,6 +12,25 @@
         <div class="row topics-content">
           <div class="topics-content">
             <h1 class="wf-hannari pd-tb primary-text-color">おしらせ</h1>
+            <div class="col-sm-8 col-sm-offset-2">
+              <div class="col-xs-12">
+                <% @contents.each do |content| %>
+                <div class="">
+                  <dl class="news-list">
+                    <dt class="col-sm-5">
+                      <%= content.date %>
+                    </dt>
+                    <dd class="col-sm-7">
+                      <%= content.title %>
+                    </dd>
+                  </dl>
+                </div>
+                <% end %>
+              </div>
+              </div>
+            </div>
+
+
           </div>
           </div>
         </div>

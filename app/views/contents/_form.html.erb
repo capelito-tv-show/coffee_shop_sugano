@@ -1,44 +1,58 @@
-<%= form_for(@content) do |f| %>
-  <% if @content.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@content.errors.count, "error") %> prohibited this content from being saved:</h2>
+<div class="conteiner">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 text-left">
+      <h2>新規投稿を作成する</h2>
 
-      <ul>
-      <% @content.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <%= form_for(@content) do |f| %>
+        <% if @content.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@content.errors.count, "error") %> prohibited this content from being saved:</h2>
+
+            <ul>
+            <% @content.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :日付 %><br>
+          <%= f.datetime_select :date,:use_month_numbers	=>true %> <br>
+          <%= f.label :タイトル %><br>
+          <%= f.text_field :title %> <br>
+          <%= f.label :記事 %><br>
+          <%= f.text_field :text, :size => "60x30",:class => "input-lg"%>
+        </div>
+
+
+        <!-- 追加個所 -->
+       <div class="field">
+         <% if @content.image? %>
+           <div class="thumbnail">
+           <%= image_tag @content.image.url %>
+         </div>
+         <% end %><br>
+         <%= f.label :画像を追加する %><br>
+         <%= f.file_field :image %>
+         <%= f.hidden_field :image_cache %>
+       </div>
+       <div class="field">
+         <!-- 既存レコード(DBに保存されている)かつ、画像が存在する場合 -->
+         <% if @content.persisted? && @content.image? %>
+           <label>
+           <%= f.check_box :remove_image %>
+           画像を削除
+         </label>
+         <% end %>
+       </div>
+       <!-- 追加個所終了 -->
+
+        <div class="actions">
+          <%= f.submit :投稿する %>
+        </div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.datetime_select :date %>
   </div>
-  <!-- 追加個所 -->
- <div class="field">
-   <% if @content.image? %>
-     <div class="thumbnail">
-     <%= image_tag @content.image.url %>
-   </div>
- <% end %><br>
-   <%= f.label :image %><br>
-   <%= f.file_field :image %>
-   <%= f.hidden_field :image_cache %>
- </div>
- <div class="field">
-   <!-- 既存レコード(DBに保存されている)かつ、画像が存在する場合 -->
-   <% if @content.persisted? && @content.image? %>
-     <label>
-     <%= f.check_box :remove_image %>
-     画像を削除
-   </label>
- <% end %>
- </div>
- <!-- 追加個所終了 -->
-
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
