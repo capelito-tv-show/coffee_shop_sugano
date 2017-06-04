@@ -54,4 +54,14 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  root 'shop#landing'
+  get '/menu'=>'shop#menu'
+  get '/list'=>'shop#list'
+  get '/sales'=>'shop#sales'
+  get '/display'=>'shop#display'
+  get '/privacy'=>'shop#privacy'
+  get '/access'=>'shop#access'
+
+
 end
