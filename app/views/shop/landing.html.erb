@@ -17,11 +17,11 @@
                 <% @contents.each do |content| %>
                 <div class="">
                   <dl class="news-list">
-                    <dt class="col-sm-5">
+                    <dd class="col-xs-5 col-sm-5">
                       <%= content.date %>
-                    </dt>
-                    <dd class="col-sm-7">
-                      <%= content.title %>
+                    </dd>
+                    <dd class="col-sm-7 col-xs-7 text-left">
+                      <%= link_to content.title ,content_path(content.id) %>
                     </dd>
                   </dl>
                 </div>
