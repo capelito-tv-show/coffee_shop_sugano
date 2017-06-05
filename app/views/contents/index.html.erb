@@ -1,18 +1,17 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
+    <div class="c-box col-sm-8 col-sm-offset-2 text-left" >
       <p id="notice"><%= notice %></p>
-
-      <h3>お知らせ</h3>
+      <h3 style="border-bottom:1px solid #d9d9d7;">お知らせ</h3>
           <% @contents.each do |content| %>
-            <div class="c-head text-left">
+            <div class="text-left" style="padding-top:20px;">
               <%= content.date %>
               <h4 class=""><%= content.title %></h4>
             </div>
-            <div class="c-image">
+            <div class="">
               <% if content.image? %>
                 <div class="thumbnail" style="">
-                  <%= image_tag(content.image.url,:class =>"",:style =>"") %>
+                  <%= image_tag(content.image.url,:class =>"c-image",:style =>"") %>
                 </div>
               <% end %>
             </div>
@@ -22,14 +21,16 @@
                 </p>
               </div>
 
-              <div class="text-left">
+              <div class="text-left" style="border-bottom:1px solid #d9d9d7;padding-bottom:20px;">
                 <%= link_to '投稿を閲覧する', content %> <br>
                 <%= link_to '編集する', edit_content_path(content) %> <br>
                 <%= link_to '削除する', content, method: :delete, data: { confirm: 'Are you sure?' } %>      <br>
               </div>
-
           <% end %>
       <br>
+      <div class="" >
+
+      </div>
       <%= link_to '新規投稿作成', new_content_path %>
     </div>
   </div>

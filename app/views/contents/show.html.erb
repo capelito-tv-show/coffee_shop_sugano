@@ -1,20 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @content.date %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 text-left" style="padding:0 30px 0 30px ;">
+      <p>
+        <%= @content.date %>
+      </p>
+      <h4> <%= @content.title %></h4>
 
-<!-- 追加箇所 開始 -->
-<p>
-<strong>Image:</strong>
-<% if @content.image? %>
-  <div class="thumbnail">
-  <%= image_tag @content.image.url %>
+      <!-- 追加箇所 開始 -->
+      <p>
+      <% if @content.image? %>
+        <div class="" style="">
+          <%= image_tag @content.image.url,:class =>"img-responsive c-image",:style =>"" %>
+        </div>
+      <% end %>
+      </p>
+
+      <div class="c-text">
+        <p>
+          <%= @content.text %>
+        </p>
+      </div>
+      <!-- 追加箇所 終了 -->
+
+      <%= link_to '投稿を編集する', edit_content_path(@content) %> |
+      <%= link_to '戻る', contents_path %>
+    </div>
+  </div>
 </div>
-<% end %>
-</p>
-<!-- 追加箇所 終了 -->
-
-<%= link_to '投稿を編集する', edit_content_path(@content) %> |
-<%= link_to '戻る', contents_path %>

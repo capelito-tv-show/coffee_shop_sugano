@@ -288,6 +288,15 @@ header{
   }
 }
 
+//contentsお知らせ機能
+.c-box{
+  border: 1px solid  #d9d9d7;
+}
+
+.c-image{
+  max-height:300px;
+  object-fit: cover;
+}
 
 //Sales
 
