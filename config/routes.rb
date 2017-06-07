@@ -59,6 +59,6 @@ Rails.application.routes.draw do
   get '/display'=>'shop#display'
   get '/privacy'=>'shop#privacy'
   get '/access'=>'shop#access'
-
+  get '/info'=>'shop#info'
 
 end

@@ -1,16 +1,18 @@
 body {
   background-color: #fff;
-  color: #333;
+
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 1.2rem;
   line-height: 18px;
 }
 
-p, ol, ul, td {
+p, ol, ul,th, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 1.2rem;
   line-height: 18px;
+  font-weight: 200;
 }
+
 
 pre {
   background-color: #eee;
@@ -19,15 +21,16 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #3d3935;
 
   &:visited {
-    color: #666;
+    color: #3d3935;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: white;
+    background-color: #007B49;
+    border-radius: 5px;
   }
 }
 
@@ -58,7 +61,7 @@ div {
   h2 {
     text-align: left;
     font-weight: bold;
-    padding: 5px 5px 5px 15px;
+    // padding: 5px 5px 5px 15px;
     font-size: 12px;
     margin: -7px;
     margin-bottom: 0px;
@@ -69,5 +72,103 @@ div {
   ul li {
     font-size: 12px;
     list-style: square;
+  }
+  ul li a{
+    padding: 10px;
+
+  }
+}
+
+//ランディングページ
+.l-box{
+  padding:30px 20px 30px 20px;
+  background:#F5F5F5;
+}
+.l-box img{
+}
+
+
+
+
+@media screen and (max-width: 640px){
+  .spwrap{
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+  .l-list ul {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .l-list ul li {
+    display: block;
+    width: 100% !important;
+    text-align: center;
+  }
+}
+
+
+.back-image{
+  // background-image: url('/assets/background2.png');
+}
+.l-text{
+  padding: 20px  0 20px;
+}
+.l-text a{
+  color:#007B49;
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+.l-box{
+  padding: 20px  0 20px;
+  background-color:white;
+  margin-bottom: 20px;
+}
+.l-box a{
+  color:#007B49;
+  text-decoration: underline;
+  font-size: 1.0rem;
+}
+
+.l-box p{
+  padding: 10px;
+  font-size: 1.2rem;
+}
+.l-box img{
+  padding: 10px;
+  background:white;
+  object-fit:cover;
+  height: 200px;
+}
+
+.s-box{
+  padding: 20px  0 20px;
+  background-color:white;
+  margin-bottom: 20px;
+}
+
+.s-box p{
+  padding: 10px;
+  font-size: 1.2rem;
+}
+.s-box h4{
+  padding: 10px;
+
+}
+.s-box img{
+  padding: 10px;
+  background:white;
+  object-fit:cover;
+  height: 200px;
+}
+
+@media screen and (max-width:767px) {
+
+  .l-box img{
+    height: 100px;
+  }
+
+  .s-box img{
+    height: 100px;
   }
 }
