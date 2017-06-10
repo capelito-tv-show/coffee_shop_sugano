@@ -14,11 +14,11 @@ default: &default
   encoding: utf8
   pool: 5
   username: sugano-coffee
-  password:sa53932536
+  password: sa53932536
   socket: /tmp/mysql.sock
   charset: utf8
   collation: utf8_general_ci
-  
+
 development:
   <<: *default
   database: coffee_shop_sugano_development
