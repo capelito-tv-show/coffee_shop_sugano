@@ -1,5 +1,4 @@
 class ContentsController < ApplicationController
-  before_action :authenticate_admin!
   before_action :set_content, only: [:show, :edit, :update, :destroy]
 
   # GET /contents
