@@ -16,7 +16,9 @@ default: &default
   username: root
   password:
   socket: /tmp/mysql.sock
-
+  charset: utf8
+  collation: utf8_general_ci
+  
 development:
   <<: *default
   database: coffee_shop_sugano_development
