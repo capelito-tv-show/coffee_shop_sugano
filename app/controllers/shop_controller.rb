@@ -16,7 +16,5 @@ class ShopController < ApplicationController
   def sales
   end
 
-  def info
-    @contents = Content.all
-  end
+
 end

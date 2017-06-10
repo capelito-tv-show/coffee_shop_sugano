@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: 
+  password:
   socket: /tmp/mysql.sock
 
 development:
@@ -52,3 +52,4 @@ production:
   database: coffee_shop_sugano_production
   username: coffee_shop_sugano
   password: <%= ENV['COFFEE_SHOP_SUGANO_DATABASE_PASSWORD'] %>
+  role: coffee_shop_sugano
