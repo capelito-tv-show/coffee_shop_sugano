@@ -9,9 +9,9 @@ body{
   /*background: url("background3.png") repeat 0 0;*/
   /*background-size: cover;*/
   background: #f7f6f4;
-  color: #635d5d;
+  color: #3d3935;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 0 auto;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -27,13 +27,13 @@ body{
 @media screen and (min-width:768px) and (max-width:1024px) {
     /*　画面サイズが768pxから1024pxまではここを読み込む　*/
     .p-superwrapper{
-      background-color:#5d3d2c;
+      background-color:#392c19;
     }
 }
 @media screen and (min-width:1024px) {
     /*　画面サイズが1024pxからはここを読み込む　*/
     .p-superwrapper{
-      background-color:#5d3d2c;
+      background-color:#392c19;
     }
 
 }
@@ -60,13 +60,6 @@ li{list-style: none;}
 
 
 /*Bootstrap上書き系*/
-.button-index{border-radius: 0;}
-.button-index a {color: #FFF;}
-.navbar-fixed-top-index{position: ;top: 0;border-width: 0 0 1px;right: 0;left: 0;z-index: 1030;}
-
-.content{
-  line-height: 2.5rem;
-}
 
 //padding
 .pd-lr{padding-left: 20px;padding-right: 20px;}
@@ -85,12 +78,6 @@ li{list-style: none;}
   width: 20%;
   margin: 0 auto;
   padding-top: 40px;
-}
-.border-jp{
-  border: 4px solid #82636b;
-  border-radius: 240px 15px 185px 15px / 15px 200px 15px 185px;
-  margin: 2em;
-  padding: 2em;
 }
 .border-jp-white{
   border: 4px solid #FFF;
@@ -298,6 +285,10 @@ header{
   object-fit: cover;
 }
 
+
+//landing
+
+
 //Sales
 
 .sales .container .row{
@@ -332,4 +323,8 @@ header{
 .sublist li {
   padding: 0 10px;
   border-right: 1px solid black;
+}
+
+.sublist li a{
+  color: white;
 }

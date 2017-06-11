@@ -1,16 +1,18 @@
 body {
   background-color: #fff;
-  color: #333;
+
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 1.2rem;
   line-height: 18px;
 }
 
-p, ol, ul, td {
+p, ol, ul,th, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 1.2rem;
   line-height: 18px;
+  font-weight: 200;
 }
+
 
 pre {
   background-color: #eee;
@@ -19,23 +21,16 @@ pre {
 }
 
 a {
-  color: #000;
-
+  color: #3d3935;
 
   &:visited {
-    color: #666;
+    color: #3d3935;
   }
 
   &:hover {
-<<<<<<< HEAD
-    color: #007B49;
-    // background-color: #007B49;
+    color: white;
+    background-color: #007B49;
     border-radius: 5px;
-    border: 1px solid #007B49;
-=======
-    color: #fff;
-    background-color: #000;
->>>>>>> parent of a87e71e... だいたい完成しましたねやりました
   }
 }
 
@@ -66,7 +61,7 @@ div {
   h2 {
     text-align: left;
     font-weight: bold;
-    padding: 5px 5px 5px 15px;
+    // padding: 5px 5px 5px 15px;
     font-size: 12px;
     margin: -7px;
     margin-bottom: 0px;
@@ -78,7 +73,6 @@ div {
     font-size: 12px;
     list-style: square;
   }
-<<<<<<< HEAD
   ul li a{
     padding: 10px;
 
@@ -121,7 +115,7 @@ div {
 }
 .l-text a{
   color:#007B49;
-  // text-decoration: underline;
+  text-decoration: underline;
   font-size: 1.5rem;
 }
 
@@ -132,12 +126,8 @@ div {
 }
 .l-box a{
   color:#007B49;
-  // text-decoration: underline;
+  text-decoration: underline;
   font-size: 1.0rem;
-  border-radius: 5px;
-  border: 1px solid #007B49;
-  padding: 7px;
-
 }
 
 .l-box p{
@@ -181,6 +171,4 @@ div {
   .s-box img{
     height: 100px;
   }
-=======
->>>>>>> parent of a87e71e... だいたい完成しましたねやりました
 }
